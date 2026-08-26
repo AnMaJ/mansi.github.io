@@ -88,6 +88,27 @@ a:hover { text-decoration: underline; }
 .edu-degree { color: var(--muted); font-size: 0.9rem; margin-bottom: 2px; }
 .edu-dates { color: var(--muted); font-size: 0.85rem; }
 
+/* Experience summary in About section */
+.experience-summary { margin: 24px 0; padding-top: 24px; border-top: 1px solid rgba(0,0,0,0.08); }
+.experience-summary h3 { margin: 0 0 16px; color: var(--text); }
+.exp-item { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; padding: 8px 0; }
+.exp-icon { font-size: 18px; width: 24px; text-align: center; margin-top: 2px; }
+.exp-details { flex: 1; }
+.exp-title { font-weight: 600; color: var(--text); margin-bottom: 2px; }
+.exp-org { color: var(--muted); font-size: 0.9rem; margin-bottom: 2px; }
+.exp-dates { color: var(--muted); font-size: 0.85rem; margin-bottom: 2px; }
+.exp-desc { color: var(--text); font-size: 0.9rem; }
+
+/* Academic service summary in About section */
+.service-summary { margin: 24px 0; padding-top: 24px; border-top: 1px solid rgba(0,0,0,0.08); }
+.service-summary h3 { margin: 0 0 16px; color: var(--text); }
+.service-item { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; padding: 8px 0; }
+.service-icon { font-size: 18px; width: 24px; text-align: center; }
+.service-details { flex: 1; }
+.service-role { font-weight: 600; color: var(--text); margin-bottom: 2px; }
+.service-venue { color: var(--muted); font-size: 0.9rem; margin-bottom: 2px; }
+.service-year { color: var(--muted); font-size: 0.85rem; }
+
 /* Publications summary in About section */
 .publications-summary { margin: 32px 0; padding-top: 24px; border-top: 1px solid rgba(0,0,0,0.08); }
 .publications-summary h3 { margin: 0 0 20px; color: var(--text); }
