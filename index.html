@@ -57,10 +57,10 @@
             <p>I am a PhD student in Computing at Imperial College London. My research interests include controllable generation, interpretability, and trustworthy AI.</p>
             <p>My research focuses on understanding and mitigating risks in generative AI systems with the help of localisation methods to locate concept neurons and leveraging these to extract concept ontologies in generative models. I love studying models' internal representations of concepts and linking them to model behaviours, as this gives room for improving controllability. Around this, my work spans:</p>
             <ol>
-              <li><strong>Concept unlearning</strong> — removing unsafe or unwanted concepts from text-to-image diffusion models, and auditing how well they are actually removed. (🧹 <a href="https://arxiv.org/pdf/2602.07919" target="_blank" rel="noopener">TRUST</a>, <a href="https://openreview.net/pdf?id=v5DhSFeVh3" target="_blank" rel="noopener">Certified Unlearning</a>, <a href="https://arxiv.org/pdf/2609.35269" target="_blank" rel="noopener">eval-unlearn</a>)</li>
+              <li><strong>Concept unlearning</strong> — removing unsafe or unwanted concepts from text-to-image diffusion models, and auditing how well they are actually removed. (🧹 <a href="https://arxiv.org/pdf/2602.07919" target="_blank" rel="noopener">TRUST</a>, <a href="https://arxiv.org/pdf/2609.12163" target="_blank" rel="noopener">Certified Unlearning</a>, <a href="https://arxiv.org/pdf/2609.35269" target="_blank" rel="noopener">eval-unlearn</a>)</li>
               <li><strong>Bias mitigation</strong> — aligning the internal concept ontology of generative models to reduce harmful bias without breaking generation. (⚖️ <a href="https://arxiv.org/pdf/2607.03397" target="_blank" rel="noopener">CO-ALIGN</a>)</li>
               <li><strong>Privacy and attribute leakage</strong> — identifying sensitive attributes that leak through text-to-image generation, and building defences. (🔒 <a href="https://petsymposium.org/popets/2025/popets-2025-0130.pdf" target="_blank" rel="noopener">Leaky Diffusion</a>, <a href="https://www.isca-archive.org/interspeech_2025/mansi25_interspeech.html" target="_blank" rel="noopener">Dementia Speech Alignment</a>)</li>
-              <li><strong>Faithful reasoning and explanations</strong> — argumentative LLMs whose verdicts are faithful by construction. (💬 <a href="https://arxiv.org/pdf/2605.20098" target="_blank" rel="noopener">ITA</a>, <a href="https://arxiv.org/pdf/2508.09385" target="_blank" rel="noopener">Sparsified QAEs</a>)</li>
+              <li><strong>Faithful reasoning and explanations</strong> — argumentative LLMs whose verdicts are faithful by construction. (💬 <a href="https://arxiv.org/pdf/2605.20098" target="_blank" rel="noopener">ITA</a>, <a href="https://ceur-ws.org/Vol-4066/paper_4.pdf" target="_blank" rel="noopener">Sparsified QAEs</a>)</li>
             </ol>
             <p>I am motivated to work towards improving AI Safety, and therefore, I am actively involved in educating myself with emerging risks and defences. I recently completed an AI Safety Fellowship at <a href="https://www.lasrlabs.org/" target="_blank" rel="noopener">LASR Labs</a>. Previously, I completed my MRes in Artificial Intelligence and Machine Learning at Imperial College London, and my B.Tech in Computer Science and Engineering from IIT Guwahati. I also gained valuable industry experience as a Software Engineer at Microsoft.</p>
             <p>I'm deeply interested in Mechanistic Interpretability, Explainable AI, and Reinforcement Learning. When I am not experimenting or judging papers 🤓, I enjoy mentoring junior students, playing chess, running, and reading books.</p>
@@ -185,7 +185,7 @@
                 <div class="pub-venue">NeurIPS 2026 (Poster)</div>
                 <p class="pub-desc">A bias mitigation approach that aligns the model's internal concept ontology across the text encoder and denoiser, improving fairness by 30% while reducing semantically incoherent outputs by 88% and preserving image quality.</p>
                 <div class="pub-tags"><button class="tag" data-tag="Fairness" type="button">Fairness</button></div>
-                <div class="pub-links"><a href="https://openreview.net/forum?id=vOSMBUB46a" target="_blank" rel="noopener">paper</a><a href="https://arxiv.org/pdf/2607.03397" target="_blank" rel="noopener">pdf</a></div>
+                <div class="pub-links"><a href="https://arxiv.org/pdf/2607.03397" target="_blank" rel="noopener">paper</a><a href="https://github.com/AnMaJ/CO-ALIGN-Efficient-bias-mitigation-in-T2I-diffusion-models-using-Concept-Graphs" target="_blank" rel="noopener">code</a></div>
               </div>
             </div>
 
@@ -209,7 +209,7 @@
                 <div class="pub-venue">Preprint 2026</div>
                 <p class="pub-desc">A certification framework that derives high-confidence upper bounds on residual concept leakage after unlearning. Certified bounds exceed attack success rates by 16.2% on average, showing that attack-based evaluations underestimate leakage.</p>
                 <div class="pub-tags"><button class="tag" data-tag="Unlearning" type="button">Unlearning</button></div>
-                <div class="pub-links"><a href="https://openreview.net/pdf?id=v5DhSFeVh3" target="_blank" rel="noopener">paper</a></div>
+                <div class="pub-links"><a href="https://arxiv.org/pdf/2609.12163" target="_blank" rel="noopener">paper</a><a href="https://github.com/AnMaJ/Certifying-Concept-Unlearning-in-Text-to-Image-Diffusion-Models" target="_blank" rel="noopener">code</a></div>
               </div>
             </div>
 
@@ -221,7 +221,7 @@
                 <div class="pub-venue">Preprint 2026</div>
                 <p class="pub-desc">An open-source Python library that benchmarks twelve concept unlearning techniques with nine evaluation metrics under one reproducible framework, plus a public HuggingFace leaderboard.</p>
                 <div class="pub-tags"><button class="tag" data-tag="Unlearning" type="button">Unlearning</button></div>
-                <div class="pub-links"><a href="https://arxiv.org/pdf/2609.35269" target="_blank" rel="noopener">paper</a><a href="https://eval-unlearn.readthedocs.io" target="_blank" rel="noopener">project page</a></div>
+                <div class="pub-links"><a href="https://arxiv.org/pdf/2609.35269" target="_blank" rel="noopener">paper</a><a href="https://github.com/REAL-Lab-Imperial/Eval-Unlearn" target="_blank" rel="noopener">code</a><a href="https://eval-unlearn.readthedocs.io" target="_blank" rel="noopener">project page</a></div>
               </div>
             </div>
 
@@ -233,7 +233,7 @@
                 <div class="pub-venue">ACM CCS 2026</div>
                 <p class="pub-desc">TRUST dynamically estimates target concept neurons and unlearns them via selective fine-tuning with Hessian-based regularization. It is robust to adversarial prompts, preserves generation quality (∆FID = 0.02), and runs significantly faster than prior methods.</p>
                 <div class="pub-tags"><button class="tag" data-tag="Unlearning" type="button">Unlearning</button></div>
-                <div class="pub-links"><a href="https://arxiv.org/pdf/2602.07919" target="_blank" rel="noopener">paper</a><a href="https://anmaj.github.io/Selective-Finetuning-For-Targeted-and-Robust-Concept-Unlearning/" target="_blank" rel="noopener">project page</a></div>
+                <div class="pub-links"><a href="https://arxiv.org/pdf/2602.07919" target="_blank" rel="noopener">paper</a><a href="https://github.com/AnMaJ/Selective-Finetuning-For-Targeted-and-Robust-Concept-Unlearning" target="_blank" rel="noopener">code</a><a href="https://anmaj.github.io/Selective-Finetuning-For-Targeted-and-Robust-Concept-Unlearning/" target="_blank" rel="noopener">project page</a></div>
               </div>
             </div>
 
@@ -241,11 +241,11 @@
               <div class="pub-figure"><img src="assets/Interspeech.png" alt="Dementia Speech Alignment" loading="lazy"></div>
               <div>
                 <div class="pub-title">Understanding Dementia Speech Alignment with Diffusion-Based Image Generation</div>
-                <div class="pub-authors"><strong>Mansi</strong>, Anastasios Lepipas, Soteris Demetriou, Dominika C Woszczyk, Yiying Guan</div>
+                <div class="pub-authors"><strong>Mansi*</strong>, Anastasios Lepipas*, Soteris Demetriou, Dominika C Woszczyk, Yiying Guan</div>
                 <div class="pub-venue">INTERSPEECH 2025 (Oral)</div>
                 <p class="pub-desc">We investigate how text-to-image generation can inadvertently reveal markers of cognitive decline from dementia speech, with implications for privacy in healthcare applications.</p>
                 <div class="pub-tags"><button class="tag" data-tag="Privacy" type="button">Privacy</button></div>
-                <div class="pub-links"><a href="https://www.isca-archive.org/interspeech_2025/mansi25_interspeech.html" target="_blank" rel="noopener">paper</a><a href="https://www.isca-archive.org/interspeech_2025/mansi25_interspeech.pdf" target="_blank" rel="noopener">pdf</a></div>
+                <div class="pub-links"><a href="https://www.isca-archive.org/interspeech_2025/mansi25_interspeech.html" target="_blank" rel="noopener">publication</a><a href="https://arxiv.org/pdf/2508.09385" target="_blank" rel="noopener">paper</a></div>
               </div>
             </div>
 
@@ -253,11 +253,11 @@
               <div class="pub-figure"><img src="assets/PoPETS.png" alt="Leaky Diffusion" loading="lazy"></div>
               <div>
                 <div class="pub-title">Leaky Diffusion: Attribute Leakage in Text-Guided Image Generation</div>
-                <div class="pub-authors">Anastasios Lepipas, <strong>Mansi</strong>, Marios Charalambides, Jiani Liu, Yiying Guan, Dominika C Woszczyk, Thanh Hai Le, Soteris Demetriou</div>
+                <div class="pub-authors">Anastasios Lepipas, Marios Charalambides, Jiani Liu, Yiying Guan, Dominika C Woszczyk, <strong>Mansi</strong>, Thanh Hai Le, Soteris Demetriou</div>
                 <div class="pub-venue">PoPETS 2025</div>
                 <p class="pub-desc">We analyze attribute leakage paths in text-guided diffusion models and introduce a new authorship identification attack, highlighting privacy risks in current generative AI systems.</p>
                 <div class="pub-tags"><button class="tag" data-tag="Privacy" type="button">Privacy</button></div>
-                <div class="pub-links"><a href="https://petsymposium.org/popets/2025/popets-2025-0130.pdf" target="_blank" rel="noopener">paper</a></div>
+                <div class="pub-links"><a href="https://petsymposium.org/popets/2025/popets-2025-0130.pdf" target="_blank" rel="noopener">publication</a></div>
               </div>
             </div>
 
@@ -281,7 +281,7 @@
                 <div class="pub-venue">3rd International Workshop on Argumentation for eXplainable AI</div>
                 <p class="pub-desc">We study how sparsification affects the quality and interpretability of quantitative argumentative explanations of neural networks.</p>
                 <div class="pub-tags"><button class="tag" data-tag="Argumentation" type="button">Argumentation</button></div>
-                <div class="pub-links"><a href="https://arxiv.org/pdf/2508.09385" target="_blank" rel="noopener">paper</a></div>
+                <div class="pub-links"><a href="https://ceur-ws.org/Vol-4066/paper_4.pdf" target="_blank" rel="noopener">publication</a></div>
               </div>
             </div>
           </div>
