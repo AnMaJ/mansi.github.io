@@ -4,553 +4,412 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mansi | Personal Website</title>
-    <meta name="description" content="Mansi — AI/ML researcher. Education, research, publications, projects, experience, and contact.">
+    <meta name="description" content="Mansi — PhD student at Imperial College London working on trustworthy generative AI. Biography, news, experience, publications, and service.">
     <link rel="icon" type="image/png" href="assets/website-icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script>
+      // Apply saved / system theme before paint to avoid a flash
+      (function () {
+        var mode = null;
+        try { mode = localStorage.getItem('site-mode'); } catch (e) {}
+        if (!mode && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) mode = 'dark';
+        if (mode === 'dark') document.documentElement.classList.add('dark');
+      })();
+    </script>
   </head>
-  <body>
-    <div class="fractal-bg" aria-hidden="true"></div>
-    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
-    <div class="layout">
+  <body id="top">
+    <main class="page">
       <aside class="sidebar">
-        <div class="profile-left">
-          <img src="assets/Mansi_picture.jpeg" alt="Mansi portrait" class="avatar" onerror="this.src='https://via.placeholder.com/240x240.png?text=Mansi';">
-          <h1 class="name">Mansi</h1>
-          <p class="tagline">PhD (Computing) <br> Imperial College London</p>
-          <div class="socials horiz">
-            <a href="mailto:m24@ic.ac.uk" aria-label="Email"><span class="sr-only">Email</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 6.5A2.5 2.5 0 0 1 4.5 4h15A2.5 2.5 0 0 1 22 6.5v11A2.5 2.5 0 0 1 19.5 20h-15A2.5 2.5 0 0 1 2 17.5v-11Zm2.3-.5 7.2 5.2c.3.2.7.2 1 0L19.7 6H4.3Zm15.2 2.1-6.4 4.6a2.5 2.5 0 0 1-2.9 0L3.8 8.1v9.4c0 .4.3.7.7.7h15c.4 0 .7-.3.7-.7V8.1Z"></path></svg></a>
-            <a href="https://www.linkedin.com/in/mansi-973736204/" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="sr-only">LinkedIn</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.1c.7-1.3 2.4-2.7 5-2.7 5.3 0 6.3 3.5 6.3 8V24h-5v-7.1c0-1.7 0-3.9-2.4-3.9s-2.8 1.9-2.8 3.8V24h-5V8z"></path></svg></a>
-            <a href="https://github.com/AnMaJ" target="_blank" rel="noopener" aria-label="GitHub"><span class="sr-only">GitHub</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.2.8-.5v-2c-3.3.7-4-1.6-4-1.6-.6-1.6-1.4-2-1.4-2-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.6-1.3-5.6-6 0-1.3.5-2.4 1.2-3.2 0-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0C17 6.9 18 7.2 18 7.2c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.7-2.9 5.7-5.6 6 .4.3.8 1 .8 2v3c0 .3.2.6.8.5A12 12 0 0 0 12 .5z"></path></svg></a>
-            <a href="https://scholar.google.com/citations?user=uFoUkoUAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar"><span class="sr-only">Scholar</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 9l10 6 10-6-10-6Zm6 8.27V15l-6 3.38L6 15v-3.73l6 3.38 6-3.38Z"></path></svg></a>
-            <a href="https://drive.google.com/file/d/1hqOonxMsi83rNLWpWJqmbCpqhpBaBGw-/view?usp=drive_link" target="_blank" rel="noopener" class="resume-text-link">Resume</a>
-          </div>
+        <img src="assets/Mansi_mountain_2.jpg" alt="Mansi" class="avatar">
+        <h1 class="name">Mansi</h1>
+        <div class="role">PhD student in Computing</div>
+        <ul class="orgs">
+          <li><a href="https://www.imperial.ac.uk/" target="_blank" rel="noopener">Imperial College London</a></li>
+        </ul>
+        <div class="contact">
+          <a href="mailto:m24@ic.ac.uk">m24@ic.ac.uk</a><br>
+          <a href="tel:+447818915997">+44 7818915997</a>
+        </div>
+        <div class="socials">
+          <a href="https://scholar.google.com/citations?user=uFoUkoUAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 9l10 6 10-6-10-6Zm6 8.27V15l-6 3.38L6 15v-3.73l6 3.38 6-3.38Z"></path></svg></a>
+          <a href="https://github.com/AnMaJ" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.2.8-.5v-2c-3.3.7-4-1.6-4-1.6-.6-1.6-1.4-2-1.4-2-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.6-1.3-5.6-6 0-1.3.5-2.4 1.2-3.2 0-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0C17 6.9 18 7.2 18 7.2c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.7-2.9 5.7-5.6 6 .4.3.8 1 .8 2v3c0 .3.2.6.8.5A12 12 0 0 0 12 .5z"></path></svg></a>
+          <a href="https://www.linkedin.com/in/mansi-973736204/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.1c.7-1.3 2.4-2.7 5-2.7 5.3 0 6.3 3.5 6.3 8V24h-5v-7.1c0-1.7 0-3.9-2.4-3.9s-2.8 1.9-2.8 3.8V24h-5V8z"></path></svg></a>
+          <a href="https://drive.google.com/file/d/1hqOonxMsi83rNLWpWJqmbCpqhpBaBGw-/view?usp=drive_link" target="_blank" rel="noopener" class="cv-link" title="CV">CV</a>
         </div>
       </aside>
-      <main id="top" class="content">
-        <div class="tabs" role="tablist">
-          <button class="tab active" data-tab="about" role="tab" aria-selected="true">About</button>
-          <button class="tab" data-tab="experience" role="tab">Experience</button>
-          <button class="tab" data-tab="publications" role="tab">Publications</button>
-          <button class="tab" data-tab="projects" role="tab">Projects</button>
-          <button class="tab" data-tab="achievements" role="tab">Achievements</button>
-          <button class="tab" data-tab="extracurricular" role="tab">Extracurricular</button>
-        </div>
 
-        <section id="about" class="section intro tab-panel active" role="tabpanel">
+      <div class="main">
+        <nav class="nav">
+          <a href="#about">Home</a>
+          <a href="#experience">Experience</a>
+          <a href="#publications">Publications</a>
+          <a href="#teaching">Teaching</a>
+          <a href="#service">Service</a>
+          <a href="#projects">Projects</a>
+          <a href="#achievements">Achievements</a>
+          <button class="mode-toggle" type="button" aria-label="Toggle night mode">Night</button>
+        </nav>
+        <div class="nav-accent"></div>
+
+        <section id="about" class="section">
           <h2>Hi :)</h2>
-          <p class="lead">I am a PhD student at Imperial College London. My research interests include controllable generation, interpretability, and trustworthy AI.</p>
-          
-          <p>My research focuses on understanding and mitigating risks in generative AI systems with the help of localisation methods to locate concept neurons and leveraging these to exxtract concept ontologies in generative models. I love studying model's internal representations of concepts and linking it to model behaviours, as this gives room for improving controllability. Previously, I have also worked towards identifying attribute leakage in text-to-image diffusion models and building defence mechanisms.</p>
-          
-          <p>I am motivated to work towards improving AI Safety, and therefore, I am actively involved in educating myself with emerging risks and defences. I recently completed an AI Safety Fellowship at <a href="https://www.lasrlabs.org/" target="_blank" rel="noopener">LASR Labs</a>. Previously, I completed my MRes in Artificial Intelligence and Machine Learning at Imperial College London, and my B.Tech in Computer Science and Engineering from IIT Guwahati. I also gained valuable industry experience as a Software Engineer at Microsoft.</p>
-          
-          <p>I'm deeply interested in Mechanistic Interpretability, Explainable AI, and Reinforcement Learning. When I am not experimenting or judging papers 🤓, I enjoy mentoring junior students, playing chess, running, and reading books.</p>
-          
-          <div class="education-summary">
-            <h3>Education</h3>
-            <div class="edu-item">
-              <div class="edu-icon">🎓</div>
-              <div class="edu-details">
-                <div class="edu-title">Imperial College London</div>
-                <div class="edu-degree">PhD in Computing</div>
-                <div class="edu-dates">Oct 2025 - Present</div>
-              </div>
-            </div>
-            <div class="edu-item">
-              <div class="edu-icon">🎓</div>
-              <div class="edu-details">
-                <div class="edu-title">Imperial College London</div>
-                <div class="edu-degree">MRes in Artificial Intelligence and Machine Learning</div>
-                <div class="edu-dates">Sept 2024 - Sept 2025</div>
-              </div>
-            </div>
-            <div class="edu-item">
-              <div class="edu-icon">🎓</div>
-              <div class="edu-details">
-                <div class="edu-title">Indian Institute of Technology, Guwahati</div>
-                <div class="edu-degree">B.Tech in Computer Science and Engineering</div>
-                <div class="edu-dates">Nov 2020 - May 2024</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="experience-summary">
-            <h3>Experience</h3>
-            <div class="exp-item">
-              <div class="exp-icon">🔬</div>
-              <div class="exp-details">
-                <div class="exp-title">AI Safety Research Fellow</div>
-                <div class="exp-org"><a href="https://www.lasrlabs.org/" target="_blank" rel="noopener">LASR Labs</a> (with Google DeepMind), London, UK</div>
-                <div class="exp-dates">Jan 2026 – Apr 2026</div>
-                <div class="exp-desc">Detecting Chain-of-Thought unfaithfulness in the activation space of reasoning LLMs.</div>
-              </div>
-            </div>
-            <div class="exp-item">
-              <div class="exp-icon">🔬</div>
-              <div class="exp-details">
-                <div class="exp-title">PhD / MRes Researcher</div>
-                <div class="exp-org">Imperial College London, London, UK</div>
-                <div class="exp-dates">Sept 2024 – Present</div>
-                <div class="exp-desc">Bias mitigation, concept unlearning, and attribute leakage in text-to-image diffusion models.</div>
-              </div>
-            </div>
-            <div class="exp-item">
-              <div class="exp-icon">💼</div>
-              <div class="exp-details">
-                <div class="exp-title">Software Engineer</div>
-                <div class="exp-org">Microsoft, Bangalore, India</div>
-                <div class="exp-dates">May 2024 – Sept 2024</div>
-                <div class="exp-desc">AI-powered customer care and scalability migration for Dynamics 365 Omnichannel.</div>
-              </div>
-            </div>
-            <div class="exp-item">
-              <div class="exp-icon">🔬</div>
-              <div class="exp-details">
-                <div class="exp-title">Research Intern</div>
-                <div class="exp-org">University of Pennsylvania, Remote</div>
-                <div class="exp-dates">Nov 2022 – Sept 2024</div>
-                <div class="exp-desc">Table-grounded QA generation via SQL pipelines and LLM few-shot prompting.</div>
-              </div>
-            </div>
-            <div class="exp-item">
-              <div class="exp-icon">💼</div>
-              <div class="exp-details">
-                <div class="exp-title">Software Engineer Intern</div>
-                <div class="exp-org">Microsoft, Bangalore, India</div>
-                <div class="exp-dates">May 2023 – July 2023</div>
-                <div class="exp-desc">BERT-based ICM auto-routing, improving efficiency from 53% to 93% across 98 teams.</div>
-              </div>
-            </div>
-            <div class="exp-item">
-              <div class="exp-icon">🔬</div>
-              <div class="exp-details">
-                <div class="exp-title">B.Tech Thesis Researcher</div>
-                <div class="exp-org">IIT Guwahati</div>
-                <div class="exp-dates">May 2023 – Sept 2024</div>
-                <div class="exp-desc">Built a diverse relation-extraction dataset via a 6-level relation hierarchy.</div>
-              </div>
-            </div>
-            <div class="exp-item">
-              <div class="exp-icon">🔬</div>
-              <div class="exp-details">
-                <div class="exp-title">Undergraduate Researcher</div>
-                <div class="exp-org">IIT Guwahati</div>
-                <div class="exp-dates">Aug 2023 – May 2024</div>
-                <div class="exp-desc">DDoS detection and prevention in D2D communications using Random Forest and ns-3.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="service-summary">
-            <h3>Academic Service</h3>
-            <div class="service-item">
-              <div class="service-icon">📝</div>
-              <div class="service-details">
-                <div class="service-role">Peer Reviewer</div>
-                <div class="service-venue">International Conference on Learning Representations (ICLR)</div>
-                <div class="service-year">2026</div>
-              </div>
-            </div>
-            <div class="service-item">
-              <div class="service-icon">📝</div>
-              <div class="service-details">
-                <div class="service-role">Peer Reviewer (Gold Reviewer Award, 2026)</div>
-                <div class="service-venue">International Conference on Machine Learning (ICML)</div>
-                <div class="service-year">2026</div>
-              </div>
-            </div>
-            <div class="service-item">
-              <div class="service-icon">📝</div>
-              <div class="service-details">
-                <div class="service-role">Peer Reviewer</div>
-                <div class="service-venue">Conference on Neural Information Processing Systems (NeurIPS)</div>
-                <div class="service-year">2026</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="publications-summary">
-            <h3>Selected Publications</h3>
-
-            <div class="pub-entry">
-              <h4>CO-ALIGN: Efficient Bias Mitigation in Text-to-Image Diffusion Models using Concept Graphs</h4>
-              <div class="pub-badges">
-                <a class="pub-badge" href="https://openreview.net/forum?id=vOSMBUB46a#discussion" target="_blank" rel="noopener">Publication</a>
-                <a class="pub-badge code" href="https://arxiv.org/pdf/2607.03397" target="_blank" rel="noopener">PDF</a>
-              </div>
-              <div class="pub-authors">Mansi, Avinash Kori, Francesco Leofante</div>
-              <div class="pub-venue">Under review at NeurIPS 2026</div>
-              <div class="pub-abstract">
-                Text-to-Image diffusion models often propagate harmful bias inherited from the training data, and existing mitigation techniques intervening at the text encoder or via inference-time guidance often collapse into semantically incoherent outputs. We introduce CO-ALIGN (Concept Ontology Alignment), a bias mitigation approach based on concept-graph alignment that operates on the model's internal concept ontology, aligning concepts within the text encoder and denoiser to achieve substantial bias reduction while preserving generative integrity. CO-ALIGN outperforms the state of the art, improving fairness by 30%, ∆FID = 11.4 in image quality, and 2.8% in image fidelity, while reducing semantically incoherent outputs by 88%. Better-aligned internal ontologies also enhance concept unlearning robustness across multiple unlearning techniques.
-              </div>
-            </div>
-
-            <div class="pub-entry">
-              <h4>Certifying Concept Unlearning in Text-to-Image Diffusion Models</h4>
-              <div class="pub-badges">
-                <a class="pub-badge" href="https://openreview.net/pdf?id=v5DhSFeVh3" target="_blank" rel="noopener">Publication</a>
-                <a class="pub-badge code" href="https://openreview.net/pdf?id=v5DhSFeVh3" target="_blank" rel="noopener">PDF</a>
-              </div>
-              <div class="pub-authors">Mansi, Luca Marzari, Francesco Leofante</div>
-              <div class="pub-venue">Under review at AAAI 2027 (AI Alignment Track)</div>
-              <div class="pub-abstract">
-                Existing evaluations of concept unlearning in text-to-image diffusion models rely on attack success rates from automated adversarial prompt search, leaving residual leakage over the broader prompt space largely unquantified and risking overestimated unlearning effectiveness. We introduce a certification framework for T2I concept unlearning that combines statistical certification with worst-case analysis along concept-relevant embedding directions to derive explicit, high-confidence upper bounds on residual leakage probability. Across three concept categories (NSFW content, artistic styles, and celebrity identities) and six state-of-the-art unlearning methods, certified leakage bounds consistently exceed standard attack success rates by 16.2% on average. Our results show that attack-based evaluations can significantly underestimate residual leakage, establishing certification as a necessary complement for auditing concept unlearning.
-              </div>
-            </div>
-
-            <div class="pub-entry">
-              <h4>Selective Fine-Tuning for Targeted and Robust Concept Unlearning</h4>
-              <div class="pub-badges">
-                <a class="pub-badge" href="https://arxiv.org/pdf/2602.07919" target="_blank" rel="noopener">Publication</a>
-                <a class="pub-badge code" href="https://arxiv.org/pdf/2602.07919" target="_blank" rel="noopener">PDF</a>
-              </div>
-              <div class="pub-authors">Mansi, Avinash Kori, Francesca Toni, Soteris Demetriou</div>
-              <div class="pub-venue">Preprint 2026</div>
-              <div class="pub-abstract">
-                We propose TRUST (Targeted Robust Selective fine-Tuning), a novel approach for concept unlearning in text-guided diffusion models. TRUST dynamically estimates target concept neurons and unlearns them via selective fine-tuning with Hessian-based regularization. It is robust against adversarial prompts, preserves generation quality (∆FID = 0.02), runs significantly faster than state-of-the-art baselines, and supports individual, combined, and conditional concept unlearning without specific regularization.
-              </div>
-            </div>
-
-            <div class="pub-entry">
-              <h4>Understanding Dementia Speech Alignment with Diffusion-Based Image Generation</h4>
-              <div class="pub-badges">
-                <a class="pub-badge" href="https://www.isca-archive.org/interspeech_2025/mansi25_interspeech.html" target="_blank" rel="noopener">Publication</a>
-                <a class="pub-badge code" href="https://www.isca-archive.org/interspeech_2025/mansi25_interspeech.pdf" target="_blank" rel="noopener">PDF</a>
-              </div>
-              <div class="pub-authors">Mansi, Anastasios Lepipas, Soteris Demetriou, Dominika C Woszczyk, Yiying Guan</div>
-              <div class="pub-venue">INTERSPEECH 2025 (Oral)</div>
-              <div class="pub-abstract">
-                We investigate attribute alignment signals between text and images in diffusion-based generation for dementia speech contexts. Our work explores how generative models can inadvertently reveal sensitive cognitive information through text-to-image generation, with implications for privacy and healthcare applications. We develop novel methods to detect and analyze these alignment patterns, contributing to the understanding of information leakage in generative AI systems.
-              </div>
-            </div>
-
-            <div class="pub-entry">
-              <h4>Leaky Diffusion: Attribute Leakage in Text-Guided Image Generation</h4>
-              <div class="pub-badges">
-                <a class="pub-badge" href="https://petsymposium.org/popets/2025/popets-2025-0130.pdf" target="_blank" rel="noopener">Publication</a>
-                <a class="pub-badge code" href="https://petsymposium.org/popets/2025/popets-2025-0130.pdf" target="_blank" rel="noopener">PDF</a>
-              </div>
-              <div class="pub-authors">Anastasios Lepipas, Mansi, Marios Charalambides, Jiani Liu, Yiying Guan, Dominika C Woszczyk, Thanh Hai Le, Soteris Demetriou</div>
-              <div class="pub-venue">PoPETS 2025</div>
-              <div class="pub-abstract">
-                We show and analyze attribute leakage paths in text-guided diffusion models, demonstrating how sensitive information can inadvertently leak through generative processes. Our research reveals novel attack vectors for authorship identification using text-to-image diffusion models, highlighting significant privacy concerns in current generative AI systems. We propose comprehensive analysis frameworks and mitigation strategies for these emerging security vulnerabilities.
-              </div>
-            </div>
-
-            <div class="pub-entry">
-              <h4>AmalREC: A Dataset for Relation Extraction and Classification Leveraging Amalgamation of Large Language Models</h4>
-              <div class="pub-badges">
-                <a class="pub-badge" href="https://arxiv.org/pdf/2412.20427" target="_blank" rel="noopener">Publication</a>
-                <a class="pub-badge code" href="https://arxiv.org/pdf/2412.20427" target="_blank" rel="noopener">PDF</a>
-                <a class="pub-badge demo" href="https://arxiv.org/pdf/2412.20427" target="_blank" rel="noopener">Project Page</a>
-              </div>
-              <div class="pub-authors">Mansi, Pranshu Pandya, Mahek Bhavesh Vora, Soumya Bharadwaj, Ashish Anand</div>
-              <div class="pub-venue">Preprint 2024</div>
-              <div class="pub-abstract">
-                We present AmalREC, a comprehensive relation extraction dataset created by combining LLM-based approaches with template-based methods. Our dataset leverages a 6-level relation hierarchy to generate diverse and high-quality relation extraction examples. We provide detailed analysis of bias and noise across different relation buckets, comparing the effectiveness of various generation strategies and their impact on downstream performance.
-              </div>
-            </div>
-
-            <div class="pub-entry">
-              <h4>On the Impact of Sparsification on Quantitative Argumentative Explanations in Neural Networks</h4>
-              <div class="pub-badges">
-                <a class="pub-badge" href="https://arxiv.org/pdf/2508.09385" target="_blank" rel="noopener">Publication</a>
-                <a class="pub-badge code" href="https://arxiv.org/pdf/2508.09385" target="_blank" rel="noopener">PDF</a>
-              </div>
-              <div class="pub-authors">Daniel Peacock, Mansi, Nico Potyka, Francesca Toni and Xiang Yin</div>
-              <div class="pub-venue">3rd International Workshop on Argumentation for eXplainable AI</div>
-              <div class="pub-abstract">
-                We investigate the impact of sparsification techniques on the quality and interpretability of quantitative argumentative explanations in neural networks. Our research explores how different sparsification methods affect the ability of neural networks to generate coherent, logical explanations for their predictions. We develop novel metrics to evaluate the argumentative quality of explanations and demonstrate that strategic sparsification can enhance both model efficiency and explanation interpretability without compromising predictive performance.
-              </div>
-            </div>
-          </div>
-          
-          <div class="contact-inline">
-            <h3>Contact</h3>
-            <p>Email: <a href="mailto:m24@ic.ac.uk">m24@ic.ac.uk</a> · Phone: <a href="tel:+447818915997">+44 7818915997</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/mansi-973736204/" target="_blank" rel="noopener">mansi-973736204</a> · GitHub: <a href="https://github.com/AnMaJ" target="_blank" rel="noopener">AnMaJ</a></p>
+          <div class="text bio">
+            <p>I am a PhD student in Computing at Imperial College London. My research interests include controllable generation, interpretability, and trustworthy AI.</p>
+            <p>My research focuses on understanding and mitigating risks in generative AI systems with the help of localisation methods to locate concept neurons and leveraging these to extract concept ontologies in generative models. I love studying models' internal representations of concepts and linking them to model behaviours, as this gives room for improving controllability. Around this, my work spans:</p>
+            <ol>
+              <li><strong>Concept unlearning</strong> — removing unsafe or unwanted concepts from text-to-image diffusion models, and auditing how well they are actually removed. (🧹 <a href="https://arxiv.org/pdf/2602.07919" target="_blank" rel="noopener">TRUST</a>, <a href="https://openreview.net/pdf?id=v5DhSFeVh3" target="_blank" rel="noopener">Certified Unlearning</a>, <a href="https://arxiv.org/pdf/2609.35269" target="_blank" rel="noopener">eval-unlearn</a>)</li>
+              <li><strong>Bias mitigation</strong> — aligning the internal concept ontology of generative models to reduce harmful bias without breaking generation. (⚖️ <a href="https://arxiv.org/pdf/2607.03397" target="_blank" rel="noopener">CO-ALIGN</a>)</li>
+              <li><strong>Privacy and attribute leakage</strong> — identifying sensitive attributes that leak through text-to-image generation, and building defences. (🔒 <a href="https://petsymposium.org/popets/2025/popets-2025-0130.pdf" target="_blank" rel="noopener">Leaky Diffusion</a>, <a href="https://www.isca-archive.org/interspeech_2025/mansi25_interspeech.html" target="_blank" rel="noopener">Dementia Speech Alignment</a>)</li>
+              <li><strong>Faithful reasoning and explanations</strong> — argumentative LLMs whose verdicts are faithful by construction. (💬 <a href="https://arxiv.org/pdf/2605.20098" target="_blank" rel="noopener">ITA</a>, <a href="https://arxiv.org/pdf/2508.09385" target="_blank" rel="noopener">Sparsified QAEs</a>)</li>
+            </ol>
+            <p>I am motivated to work towards improving AI Safety, and therefore, I am actively involved in educating myself with emerging risks and defences. I recently completed an AI Safety Fellowship at <a href="https://www.lasrlabs.org/" target="_blank" rel="noopener">LASR Labs</a>. Previously, I completed my MRes in Artificial Intelligence and Machine Learning at Imperial College London, and my B.Tech in Computer Science and Engineering from IIT Guwahati. I also gained valuable industry experience as a Software Engineer at Microsoft.</p>
+            <p>I'm deeply interested in Mechanistic Interpretability, Explainable AI, and Reinforcement Learning. When I am not experimenting or judging papers 🤓, I enjoy mentoring junior students, playing chess, running, and reading books.</p>
           </div>
         </section>
 
+        <section id="news" class="section">
+          <h2>News</h2>
+          <ul class="news">
+            <li><span class="news-date">Sep 2026</span><span class="news-text">Two papers accepted to <strong>NeurIPS 2026</strong> (poster): CO-ALIGN and Neurosymbolic Learning for Inference-Time Argumentation! 🎉</span></li>
+            <li><span class="news-date">Sep 2026</span><span class="news-text">Released <strong>eval-unlearn</strong>, an open-source benchmark for concept unlearning in T2I diffusion models. 📦 <a href="https://eval-unlearn.readthedocs.io" target="_blank" rel="noopener">Docs</a></span></li>
+            <li><span class="news-date">2026</span><span class="news-text">TRUST (Selective Fine-Tuning for Concept Unlearning) accepted to <strong>ACM CCS 2026</strong>! 🎉</span></li>
+            <li><span class="news-date">2026</span><span class="news-text">Serving as a reviewer for <strong>AAAI 2027</strong>. 📝</span></li>
+            <li><span class="news-date">2026</span><span class="news-text">Received the <strong>Gold Reviewer Award</strong> at ICML 2026. 🏅</span></li>
+            <li><span class="news-date">Jan 2026</span><span class="news-text">Started the AI Safety Research Fellowship at <strong>LASR Labs</strong> in London 🇬🇧.</span></li>
+            <li><span class="news-date">Oct 2025</span><span class="news-text">Started my <strong>PhD in Computing</strong> at Imperial College London! 🎓</span></li>
+          </ul>
+        </section>
 
-      <section id="experience" class="section tab-panel" role="tabpanel">
-        <h2>Experience</h2>
-        
-        <h3>Research Experience</h3>
-        <ol class="timeline">
-          <li class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h3>AI Safety Research Fellow, LASR Labs</h3>
-              <div class="meta">Jan 2026 – Apr 2026 · London, UK · AI Safety Research Program</div>
-              <ul>
-                <li>Working with Google DeepMind under the supervision of Noah Siegel for detecting Chain of Thought unfaithfulness behavior in the activation space of reasoning large language models.</li>
-                <li>Conducted multiple trials on different aggregation techniques for SAE, Transcoder and Cross Coder activations, to find a signature for unfaithful behavior in the activation space.</li>
-              </ul>
-            </div>
-          </li>
-          <li class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h3>Imperial College London</h3>
-              <div class="meta">Sept 2024 – Present · London, UK</div>
-              <ul>
-                <li>Leakage of neuro-cognitive decline markers in T2I diffusion; accepted at INTERSPEECH 2025.</li>
-                <li>Authorship leakage and a new attack for authorship identification using T2I diffusion; accepted at PETS 2025.</li>
-                <li>Developing adversarially robust T2I framework with policy-driven safety controls via concept localization.</li>
-                <li>Building argumentative LLMs for faithful, self-debated explanations.</li>
-              </ul>
-            </div>
-          </li>
-          <li class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h3>University of Pennsylvania (Research Intern)</h3>
-              <div class="meta">Nov 2022 – Sept 2024 · Remote · Mentor: Dr. Vivek Gupta</div>
-              <ul>
-                <li>Diverse, coherent QA from tables using SQL-based pipeline and LLM few-shot prompting.</li>
-                <li>Graph-to-QA generation using DPlot and automatic SQL template generation.</li>
-              </ul>
-            </div>
-          </li>
-          <li class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h3>IIT Guwahati (B.Tech Thesis)</h3>
-              <div class="meta">May 2023 – Sept 2024 · Mentor: Prof. Ashish Anand</div>
-              <ul>
-                <li>Generated a diverse relation extraction dataset using a 6-level relation hierarchy.</li>
-                <li>Compared LLM-based and template-based methods; analyzed bias and noise across relation buckets.</li>
-              </ul>
-            </div>
-          </li>
-          <li class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h3>DDoS in D2D Communications</h3>
-              <div class="meta">Aug 2023 – May 2024 · IIT Guwahati</div>
-              <ul>
-                <li>Detection for seven DDoS attack types using Random Forest.</li>
-                <li>Prevention via relay deployment in ns-3 with CIC Flowmeter for packet processing.</li>
-              </ul>
-            </div>
-          </li>
-        </ol>
-        
-        <h3>Industry Experience</h3>
-        <ol class="timeline">
-          <li class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h3>Software Engineer, Microsoft</h3>
-              <div class="meta">May 2024 – Sept 2024 · Bangalore, India · Cloud & AI</div>
-              <ul>
-                <li>AI-powered customer care for Dynamics 365 Omnichannel.</li>
-                <li>Scalability migration across communication channels.</li>
-                <li>Stack: C#, Kusto, REST APIs, Docker, Azure.</li>
-              </ul>
-            </div>
-          </li>
-          <li class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h3>Software Engineer Intern, Microsoft</h3>
-              <div class="meta">May 2023 – July 2023 · Bangalore, India · Cloud & AI</div>
-              <ul>
-                <li>ICM auto-routing with BERT; efficiency improved from 53% → 93% across 98 teams.</li>
-                <li>Marker model, feedback pipeline, and RL for self-learning.</li>
-                <li>Stack: PyTorch, TensorFlow, Kusto, REST APIs, Docker, Azure.</li>
-              </ul>
-            </div>
-          </li>
-        </ol>
-      </section>
-
-      <section id="publications" class="section tab-panel" role="tabpanel">
-        <h2>Things I've worked on.</h2>
-        <div class="pub-list">
-          <article class="pub-item">
-            <div class="pub-left">
-              <h3>CO-ALIGN: Efficient Bias Mitigation in Text-to-Image Diffusion Models using Concept Graphs</h3>
-              <div class="badges">
-                <a class="badge" href="https://openreview.net/forum?id=vOSMBUB46a#discussion" target="_blank" rel="noopener">Publication</a>
-                <a class="badge code" href="https://arxiv.org/pdf/2607.03397" target="_blank" rel="noopener">PDF</a>
+        <section id="experience" class="section">
+          <h2>Professional Experience</h2>
+          <div class="exp">
+            <div class="exp-item">
+              <div class="exp-logo"><img src="assets/icons/LASR_Labs_icon.webp" alt="LASR Labs" loading="lazy"></div>
+              <div>
+                <div class="item-title">AI Safety Research Fellow</div>
+                <div class="item-meta"><a href="https://www.lasrlabs.org/" target="_blank" rel="noopener">LASR Labs</a> (with Google DeepMind), London, United Kingdom</div>
+                <div class="item-year">Jan 2026 – Apr 2026</div>
+                <div class="item-summary">Detecting Chain-of-Thought unfaithfulness in the activation space of reasoning LLMs.</div>
               </div>
-              <div class="authors">Mansi, Avinash Kori, Francesco Leofante</div>
-              <div class="meta"><em>Under review at NeurIPS 2026</em></div>
-              <p>Text-to-Image diffusion models often propagate harmful bias inherited from the training data, and existing mitigation techniques intervening at the text encoder or via inference-time guidance often collapse into semantically incoherent outputs. We introduce CO-ALIGN (Concept Ontology Alignment), a bias mitigation approach based on concept-graph alignment that operates on the model's internal concept ontology, aligning concepts within the text encoder and denoiser to achieve substantial bias reduction while preserving generative integrity. CO-ALIGN outperforms the state of the art, improving fairness by 30%, ∆FID = 11.4 in image quality, and 2.8% in image fidelity, while reducing semantically incoherent outputs by 88%. Better-aligned internal ontologies also enhance concept unlearning robustness across multiple unlearning techniques.</p>
             </div>
-            <div class="pub-right">
-              <a class="thumb" href="https://arxiv.org/pdf/2607.03397" target="_blank" rel="noopener"><img src="assets/CO-ALIGN.png" alt="CO-ALIGN: Efficient Bias Mitigation in Text-to-Image Diffusion Models using Concept Graphs"></a>
-            </div>
-          </article>
-          <article class="pub-item">
-            <div class="pub-left">
-              <h3>Certifying Concept Unlearning in Text-to-Image Diffusion Models</h3>
-              <div class="badges">
-                <a class="badge" href="https://openreview.net/pdf?id=v5DhSFeVh3" target="_blank" rel="noopener">Publication</a>
-                <a class="badge code" href="https://openreview.net/pdf?id=v5DhSFeVh3" target="_blank" rel="noopener">PDF</a>
+            <div class="exp-item">
+              <div class="exp-logo"><img src="assets/icons/Imperial_College_London_icon.png" alt="Imperial College London" loading="lazy"></div>
+              <div>
+                <div class="item-title">PhD / MRes Researcher</div>
+                <div class="item-meta">Imperial College London, London, United Kingdom</div>
+                <div class="item-year">Sep 2024 – Present</div>
+                <div class="item-summary">Bias mitigation, concept unlearning, and attribute leakage in text-to-image diffusion models.</div>
               </div>
-              <div class="authors">Mansi, Luca Marzari, Francesco Leofante</div>
-              <div class="meta"><em>Under review at AAAI 2027 (AI Alignment Track)</em></div>
-              <p>Existing evaluations of concept unlearning in text-to-image diffusion models rely on attack success rates from automated adversarial prompt search, leaving residual leakage over the broader prompt space largely unquantified and risking overestimated unlearning effectiveness. We introduce a certification framework for T2I concept unlearning that combines statistical certification with worst-case analysis along concept-relevant embedding directions to derive explicit, high-confidence upper bounds on residual leakage probability. Across three concept categories (NSFW content, artistic styles, and celebrity identities) and six state-of-the-art unlearning methods, certified leakage bounds consistently exceed standard attack success rates by 16.2% on average. Our results show that attack-based evaluations can significantly underestimate residual leakage, establishing certification as a necessary complement for auditing concept unlearning.</p>
             </div>
-            <div class="pub-right">
-              <a class="thumb" href="https://openreview.net/pdf?id=v5DhSFeVh3" target="_blank" rel="noopener"><img src="assets/Certifying-Unlearning.png" alt="Certifying Concept Unlearning in Text-to-Image Diffusion Models"></a>
-            </div>
-          </article>
-          <article class="pub-item">
-            <div class="pub-left">
-              <h3>Selective Fine-Tuning for Targeted and Robust Concept Unlearning</h3>
-              <div class="badges">
-                <a class="badge" href="https://arxiv.org/pdf/2602.07919" target="_blank" rel="noopener">Publication</a>
-                <a class="badge code" href="https://arxiv.org/pdf/2602.07919" target="_blank" rel="noopener">PDF</a>
+            <div class="exp-item">
+              <div class="exp-logo"><img src="assets/icons/Microsoft_icon.png" alt="Microsoft" loading="lazy"></div>
+              <div>
+                <div class="item-title">Software Engineer</div>
+                <div class="item-meta">Microsoft, Bangalore, India</div>
+                <div class="item-year">May 2024 – Sep 2024</div>
+                <div class="item-summary">AI-powered customer care and scalability migration for Dynamics 365 Omnichannel.</div>
               </div>
-              <div class="authors">Mansi, Avinash Kori, Francesca Toni, Soteris Demetriou</div>
-              <div class="meta"><em>Preprint 2026</em></div>
-              <p>We propose TRUST (Targeted Robust Selective fine-Tuning), a novel approach for concept unlearning in text-guided diffusion models. TRUST dynamically estimates target concept neurons and unlearns them via selective fine-tuning with Hessian-based regularization. It is robust against adversarial prompts, preserves generation quality (∆FID = 0.02), runs significantly faster than state-of-the-art baselines, and supports individual, combined, and conditional concept unlearning without specific regularization.</p>
             </div>
-            <div class="pub-right">
-              <a class="thumb" href="https://arxiv.org/pdf/2602.07919" target="_blank" rel="noopener"><img src="https://github.com/user-attachments/assets/ec55f9df-e88e-4066-9bff-576b9c658a8a" alt="Selective Fine-Tuning for Targeted and Robust Concept Unlearning"></a>
-            </div>
-          </article>
-          <article class="pub-item">
-            <div class="pub-left">
-              <h3>Understanding Dementia Speech Alignment with Diffusion-Based Image Generation</h3>
-              <div class="badges">
-                <a class="badge" href="https://arxiv.org/pdf/2508.09385" target="_blank" rel="noopener">Publication</a>
-                <a class="badge code" href="https://arxiv.org/pdf/2508.09385" target="_blank" rel="noopener">PDF</a>
+            <div class="exp-item">
+              <div class="exp-logo"><img src="assets/icons/UPenn_icon.png" alt="University of Pennsylvania" loading="lazy"></div>
+              <div>
+                <div class="item-title">Research Intern</div>
+                <div class="item-meta">University of Pennsylvania, Remote</div>
+                <div class="item-year">Nov 2022 – Sep 2024</div>
+                <div class="item-summary">Table-grounded QA generation via SQL pipelines and LLM few-shot prompting.</div>
               </div>
-              <div class="authors">Mansi, Anastasios Lepipas, Soteris Demetriou, Dominika C Woszczyk, Yiying Guan</div>
-              <div class="meta"><em>INTERSPEECH 2025</em></div>
-              <p>We investigate attribute alignment signals between text and images in diffusion-based generation for dementia speech contexts. Our work explores how generative models can inadvertently reveal sensitive cognitive information through text-to-image generation, with implications for privacy and healthcare applications. We develop novel methods to detect and analyze these alignment patterns, contributing to the understanding of information leakage in generative AI systems.</p>
             </div>
-            <div class="pub-right">
-              <a class="thumb" href="https://www.isca-archive.org/interspeech_2025/mansi25_interspeech.html" target="_blank" rel="noopener"><img src="assets/Interspeech.png" alt="Understanding Dementia Speech Alignment with Diffusion-Based Image Generation"></a>
-            </div>
-          </article>
-          <article class="pub-item">
-            <div class="pub-left">
-              <h3>Leaky Diffusion: Attribute Leakage in Text-Guided Image Generation</h3>
-              <div class="badges">
-                <a class="badge" href="https://petsymposium.org/popets/2025/popets-2025-0130.pdf" target="_blank" rel="noopener">Publication</a>
-                <a class="badge code" href="https://petsymposium.org/popets/2025/popets-2025-0130.pdf" target="_blank" rel="noopener">PDF</a>
+            <div class="exp-item">
+              <div class="exp-logo"><img src="assets/icons/Microsoft_icon.png" alt="Microsoft" loading="lazy"></div>
+              <div>
+                <div class="item-title">Software Engineer Intern</div>
+                <div class="item-meta">Microsoft, Bangalore, India</div>
+                <div class="item-year">May 2023 – Jul 2023</div>
+                <div class="item-summary">BERT-based ICM auto-routing, improving efficiency from 53% to 93% across 98 teams.</div>
               </div>
-              <div class="authors">Anastasios Lepipas, Mansi, Marios Charalambides, Jiani Liu, Yiying Guan, Dominika C Woszczyk, Thanh Hai Le, Soteris Demetriou</div>
-              <div class="meta"><em>PoPETS 2025</em></div>
-              <p>We show and analyze attribute leakage paths in text-guided diffusion models, demonstrating how sensitive information can inadvertently leak through generative processes. Our research reveals novel attack vectors for authorship identification using text-to-image diffusion models, highlighting significant privacy concerns in current generative AI systems. We propose comprehensive analysis frameworks and mitigation strategies for these emerging security vulnerabilities.</p>
             </div>
-            <div class="pub-right">
-              <a class="thumb" href="https://petsymposium.org/popets/2025/popets-2025-0130.pdf" target="_blank" rel="noopener"><img src="assets/PoPETS.png" alt="Leaky Diffusion: Attribute Leakage in Text-Guided Image Generation"></a>
-            </div>
-          </article>
-          <article class="pub-item">
-            <div class="pub-left">
-              <h3>AmalREC: A Dataset for Relation Extraction and Classification Leveraging Amalgamation of Large Language Models</h3>
-              <div class="badges">
-                <a class="badge" href="https://arxiv.org/pdf/2412.20427" target="_blank" rel="noopener">Publication</a>
-                <a class="badge code" href="https://arxiv.org/pdf/2412.20427" target="_blank" rel="noopener">PDF</a>
-                <a class="badge demo" href="https://arxiv.org/pdf/2412.20427" target="_blank" rel="noopener">Project Page</a>
+            <div class="exp-item">
+              <div class="exp-logo"><img src="assets/icons/IIT_Guwahati_icon.svg" alt="IIT Guwahati" loading="lazy"></div>
+              <div>
+                <div class="item-title">Undergraduate Researcher</div>
+                <div class="item-meta">IIT Guwahati, Guwahati, India</div>
+                <div class="item-year">May 2023 – Sep 2024</div>
+                <ul class="item-summary item-points">
+                  <li>B.Tech thesis: built a diverse relation-extraction dataset via a 6-level relation hierarchy.</li>
+                  <li>DDoS detection and prevention in D2D communications using Random Forest and ns-3.</li>
+                </ul>
               </div>
-              <div class="authors">Mansi, Pranshu Pandya, Mahek Bhavesh Vora, Soumya Bharadwaj, Ashish Anand</div>
-              <div class="meta"><em>Preprint 2024</em></div>
-              <p>We present AmalREC, a comprehensive relation extraction dataset created by combining LLM-based approaches with template-based methods. Our dataset leverages a 6-level relation hierarchy to generate diverse and high-quality relation extraction examples. We provide detailed analysis of bias and noise across different relation buckets, comparing the effectiveness of various generation strategies and their impact on downstream performance.</p>
             </div>
-            <div class="pub-right">
-              <a class="thumb" href="https://arxiv.org/pdf/2412.20427" target="_blank" rel="noopener"><img src="assets/AmalREC.png" alt="AmalREC: A Dataset for Relation Extraction and Classification"></a>
-            </div>
-          </article>
-          <article class="pub-item">
-            <div class="pub-left">
-              <h3>On the Impact of Sparsification on Quantitative Argumentative Explanations in Neural Networks</h3>
-              <div class="badges">
-                <a class="badge" href="https://arxiv.org/pdf/2508.09385" target="_blank" rel="noopener">Publication</a>
-                <a class="badge code" href="https://arxiv.org/pdf/2508.09385" target="_blank" rel="noopener">PDF</a>
+          </div>
+        </section>
+
+        <section id="education" class="section">
+          <h2>Education</h2>
+          <ul class="list">
+            <li>
+              <div class="item-title">PhD in Computing</div>
+              <div class="item-meta">Imperial College London</div>
+              <div class="item-year">2025 – Present</div>
+            </li>
+            <li>
+              <div class="item-title">MRes in Artificial Intelligence and Machine Learning</div>
+              <div class="item-meta">Imperial College London</div>
+              <div class="item-year">2024 – 2025</div>
+            </li>
+            <li>
+              <div class="item-title">B.Tech in Computer Science and Engineering</div>
+              <div class="item-meta">Indian Institute of Technology, Guwahati</div>
+              <div class="item-year">2020 – 2024</div>
+            </li>
+          </ul>
+        </section>
+
+        <section id="publications" class="section">
+          <h2>Selected Publications</h2>
+          <div class="filter">
+            <span class="filter-label">Filter:</span>
+            <button class="filter-btn is-active" data-tag="all" type="button">All</button>
+            <button class="filter-btn" data-tag="Unlearning" type="button">Unlearning</button>
+            <button class="filter-btn" data-tag="Fairness" type="button">Fairness</button>
+            <button class="filter-btn" data-tag="Privacy" type="button">Privacy</button>
+            <button class="filter-btn" data-tag="Argumentation" type="button">Argumentation</button>
+            <button class="filter-btn" data-tag="NLP" type="button">NLP</button>
+          </div>
+          <p class="pub-note">* denotes equal contribution</p>
+          <div class="pubs">
+            <div class="pub" data-tags="Fairness">
+              <div class="pub-figure"><img src="assets/CO-ALIGN.png" alt="CO-ALIGN" loading="lazy"></div>
+              <div>
+                <div class="pub-title">CO-ALIGN: Efficient Bias Mitigation in Text-to-Image Diffusion Models using Concept Graphs</div>
+                <div class="pub-authors"><strong>Mansi</strong>, Avinash Kori, Francesco Leofante</div>
+                <div class="pub-venue">NeurIPS 2026 (Poster)</div>
+                <p class="pub-desc">A bias mitigation approach that aligns the model's internal concept ontology across the text encoder and denoiser, improving fairness by 30% while reducing semantically incoherent outputs by 88% and preserving image quality.</p>
+                <div class="pub-tags"><button class="tag" data-tag="Fairness" type="button">Fairness</button></div>
+                <div class="pub-links"><a href="https://openreview.net/forum?id=vOSMBUB46a" target="_blank" rel="noopener">paper</a><a href="https://arxiv.org/pdf/2607.03397" target="_blank" rel="noopener">pdf</a></div>
               </div>
-              <div class="authors">Daniel Peacock, Mansi, Nico Potyka, Francesca Toni and Xiang Yin</div>
-              <div class="meta"><em>3rd International Workshop on Argumentation for eXplainable AI</em></div>
-              <p>We investigate the impact of sparsification techniques on the quality and interpretability of quantitative argumentative explanations in neural networks. Our research explores how different sparsification methods affect the ability of neural networks to generate coherent, logical explanations for their predictions. We develop novel metrics to evaluate the argumentative quality of explanations and demonstrate that strategic sparsification can enhance both model efficiency and explanation interpretability without compromising predictive performance.</p>
             </div>
-            <div class="pub-right">
-              <a class="thumb" href="https://arxiv.org/pdf/2508.09385" target="_blank" rel="noopener"><img src="assets/ArgXAI.png" alt="On the Impact of Sparsification on Quantitative Argumentative Explanations in Neural Networks"></a>
+
+            <div class="pub" data-tags="Argumentation,NLP">
+              <div class="pub-figure"><img src="assets/Neurosymbolic%20Learning.png" alt="Neurosymbolic Learning for Inference-Time Argumentation" loading="lazy"></div>
+              <div>
+                <div class="pub-title">Neurosymbolic Learning for Inference-Time Argumentation</div>
+                <div class="pub-authors">Gabriel Freedman*, Adam Dejl*, Adam Gould*, <strong>Mansi*</strong>, Lihu Chen, Junqi Jiang, Francesca Toni</div>
+                <div class="pub-venue">NeurIPS 2026 (Poster)</div>
+                <p class="pub-desc">ITA is a trainable neurosymbolic framework for true/false/uncertain claim verification. A formal argumentation semantics guides LLMs to generate and score arguments, then computes the verdict from them, so predictions are faithful by construction to explicit, inspectable arguments.</p>
+                <div class="pub-tags"><button class="tag" data-tag="Argumentation" type="button">Argumentation</button><button class="tag" data-tag="NLP" type="button">NLP</button></div>
+                <div class="pub-links"><a href="https://arxiv.org/pdf/2605.20098" target="_blank" rel="noopener">paper</a></div>
+              </div>
             </div>
-          </article>
-        </div>
-      </section>
 
-      <section id="projects" class="section tab-panel" role="tabpanel">
-        <h2>Key Projects</h2>
-        <div class="cards">
-          <article class="card">
-            <header><h3>Lost Child Found Application</h3><span class="meta">May 2022</span></header>
-            <p>Flutter Android app using a face recognition REST API to help find lost children.</p>
-            <p><a href="https://play.google.com/store/apps/details?id=com.manu.cheese" target="_blank" rel="noopener">Play Store</a> · <a href="https://github.com/AnMaJ/Microsoft-Engage-2022-Project-Cheese" target="_blank" rel="noopener">GitHub</a></p>
-          </article>
-          <article class="card">
-            <header><h3>Using AED to estimate Annotator Count</h3><span class="meta">Sept 2022 – Nov 2022</span></header>
-            <p>Pipeline to estimate annotator counts for classification tasks using AED with DistilBERT.</p>
-            <p><a href="https://drive.google.com/file/d/1xJ3hvvDjEwALhD1cPXVJ52LFBF3KeOrV/view?usp=drive_link" target="_blank" rel="noopener">Report</a> · <a href="https://github.com/AnMaJ/Using-AED-to-estimate-Annotator-Count" target="_blank" rel="noopener">GitHub</a></p>
-          </article>
-          <article class="card">
-            <header><h3>Live Location Tracking App</h3><span class="meta">Jul 2021 – Aug 2021</span></header>
-            <p>Flutter app to share and monitor live locations with Google Maps API and safety alerts.</p>
-            <p><a href="https://github.com/AnMaJ/Live_Location_Tracking" target="_blank" rel="noopener">GitHub</a></p>
-          </article>
-          <article class="card">
-            <header><h3>Raman — The Vision Bot</h3><span class="meta">Apr 2022 – May 2022</span></header>
-            <p>CNN-based hand-gesture recognition integrated with OpenCV and Arduino for RPS game.</p>
-            <p><a href="https://shorturl.at/gjuV2" target="_blank" rel="noopener">GitHub</a></p>
-          </article>
-          <article class="card">
-            <header><h3>Other Projects</h3></header>
-            <ul>
-              <li><a href="https://github.com/AnMaJ/NanoC_Compiler" target="_blank" rel="noopener">NanoC Compiler</a> — Compiler in Flex/Bison with MIPS codegen.</li>
-              <li><a href="https://github.com/AnMaJ/Operating-Systems-Lab-xv6" target="_blank" rel="noopener">xv6 OS</a> — Scheduling, locks, lazy allocation.</li>
-              <li><a href="https://github.com/AnMaJ/ns-3-TCP-network-simulation" target="_blank" rel="noopener">ns-3 Simulation</a> — TCP over wired/wireless analysis.</li>
-              <li><a href="https://github.com/AnMaJ/Mini-Shell" target="_blank" rel="noopener">Mini Shell</a> — Custom shell with pipes and utilities.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
+            <div class="pub" data-tags="Unlearning">
+              <div class="pub-figure"><img src="assets/Certifying-Unlearning.png" alt="Certifying Concept Unlearning" loading="lazy"></div>
+              <div>
+                <div class="pub-title">Certifying Concept Unlearning in Text-to-Image Diffusion Models</div>
+                <div class="pub-authors"><strong>Mansi</strong>, Luca Marzari, Francesco Leofante</div>
+                <div class="pub-venue">Preprint 2026</div>
+                <p class="pub-desc">A certification framework that derives high-confidence upper bounds on residual concept leakage after unlearning. Certified bounds exceed attack success rates by 16.2% on average, showing that attack-based evaluations underestimate leakage.</p>
+                <div class="pub-tags"><button class="tag" data-tag="Unlearning" type="button">Unlearning</button></div>
+                <div class="pub-links"><a href="https://openreview.net/pdf?id=v5DhSFeVh3" target="_blank" rel="noopener">paper</a></div>
+              </div>
+            </div>
 
-      <section id="achievements" class="section tab-panel" role="tabpanel">
-        <h2>Achievements</h2>
-        <ul class="list two-col">
-          <li>3rd prize at Imperial Computing Conference for work on attribute leakage.</li>
-          <li>India Future Leaders and Anne Seagrim Scholarships.</li>
-          <li>Microsoft Engage mentee; received full-time role offer.</li>
-          <li>Barclays Global Student Discovery Program: top 10 sophomores.</li>
-          <li>Grace Hopper Celebration Scholarship 2024 & 2025.</li>
-          <li>KVPY National Research Fellowship (AIR 219).</li>
-          <li>JEE Main: AIR 1 in Physics; AIR 439 overall.</li>
-          <li>JEE Advanced: AIR 1450.</li>
-          <li>ICPC: AIR 93 (certificate linked).</li>
-          <li>Flipkart Grid 4.0: Top 3% among 50k+ teams.</li>
-          <li>National Standard Examination in Physics: top 1% nationwide.</li>
-          <li>Regional Mathematics Olympiad qualifier (top 5%).</li>
-          <li>Technothlon Silver Medalist (AIR 239).</li>
-        </ul>
-      </section>
+            <div class="pub" data-tags="Unlearning">
+              <div class="pub-figure"><img src="assets/eval-unlearn.png" alt="eval-unlearn" loading="lazy"></div>
+              <div>
+                <div class="pub-title">eval-unlearn: Benchmarking unlearning in Text-to-Image Diffusion Models</div>
+                <div class="pub-authors"><strong>Mansi</strong>, Nikhil Raghavan, Zixia Huang, Kai Sheng Ong, Ji Shen Lim, Brandon Siao Xiang Ling, Francesco Leofante</div>
+                <div class="pub-venue">Preprint 2026</div>
+                <p class="pub-desc">An open-source Python library that benchmarks twelve concept unlearning techniques with nine evaluation metrics under one reproducible framework, plus a public HuggingFace leaderboard.</p>
+                <div class="pub-tags"><button class="tag" data-tag="Unlearning" type="button">Unlearning</button></div>
+                <div class="pub-links"><a href="https://arxiv.org/pdf/2609.35269" target="_blank" rel="noopener">paper</a><a href="https://eval-unlearn.readthedocs.io" target="_blank" rel="noopener">project page</a></div>
+              </div>
+            </div>
 
-      <section id="extracurricular" class="section tab-panel" role="tabpanel">
-        <h2>Extracurricular</h2>
-        <ul class="list">
-          <li>Poster designer — <a href="https://imgur.com/a/D8BE9XK" target="_blank" rel="noopener">examples</a>.</li>
-          <li>Football — Silver medal in Spardha inter-hostel championship.</li>
-        </ul>
-      </section>
+            <div class="pub" data-tags="Unlearning">
+              <div class="pub-figure"><img src="https://github.com/user-attachments/assets/ec55f9df-e88e-4066-9bff-576b9c658a8a" alt="TRUST" loading="lazy"></div>
+              <div>
+                <div class="pub-title">Selective Fine-Tuning for Targeted and Robust Concept Unlearning</div>
+                <div class="pub-authors"><strong>Mansi</strong>, Avinash Kori, Francesca Toni, Soteris Demetriou</div>
+                <div class="pub-venue">ACM CCS 2026</div>
+                <p class="pub-desc">TRUST dynamically estimates target concept neurons and unlearns them via selective fine-tuning with Hessian-based regularization. It is robust to adversarial prompts, preserves generation quality (∆FID = 0.02), and runs significantly faster than prior methods.</p>
+                <div class="pub-tags"><button class="tag" data-tag="Unlearning" type="button">Unlearning</button></div>
+                <div class="pub-links"><a href="https://arxiv.org/pdf/2602.07919" target="_blank" rel="noopener">paper</a><a href="https://anmaj.github.io/Selective-Finetuning-For-Targeted-and-Robust-Concept-Unlearning/" target="_blank" rel="noopener">project page</a></div>
+              </div>
+            </div>
 
-      
-      </main>
-    </div>
+            <div class="pub" data-tags="Privacy">
+              <div class="pub-figure"><img src="assets/Interspeech.png" alt="Dementia Speech Alignment" loading="lazy"></div>
+              <div>
+                <div class="pub-title">Understanding Dementia Speech Alignment with Diffusion-Based Image Generation</div>
+                <div class="pub-authors"><strong>Mansi</strong>, Anastasios Lepipas, Soteris Demetriou, Dominika C Woszczyk, Yiying Guan</div>
+                <div class="pub-venue">INTERSPEECH 2025 (Oral)</div>
+                <p class="pub-desc">We investigate how text-to-image generation can inadvertently reveal markers of cognitive decline from dementia speech, with implications for privacy in healthcare applications.</p>
+                <div class="pub-tags"><button class="tag" data-tag="Privacy" type="button">Privacy</button></div>
+                <div class="pub-links"><a href="https://www.isca-archive.org/interspeech_2025/mansi25_interspeech.html" target="_blank" rel="noopener">paper</a><a href="https://www.isca-archive.org/interspeech_2025/mansi25_interspeech.pdf" target="_blank" rel="noopener">pdf</a></div>
+              </div>
+            </div>
 
-    <footer class="site-footer"><p>© <span id="year"></span> Mansi</p></footer>
+            <div class="pub" data-tags="Privacy">
+              <div class="pub-figure"><img src="assets/PoPETS.png" alt="Leaky Diffusion" loading="lazy"></div>
+              <div>
+                <div class="pub-title">Leaky Diffusion: Attribute Leakage in Text-Guided Image Generation</div>
+                <div class="pub-authors">Anastasios Lepipas, <strong>Mansi</strong>, Marios Charalambides, Jiani Liu, Yiying Guan, Dominika C Woszczyk, Thanh Hai Le, Soteris Demetriou</div>
+                <div class="pub-venue">PoPETS 2025</div>
+                <p class="pub-desc">We analyze attribute leakage paths in text-guided diffusion models and introduce a new authorship identification attack, highlighting privacy risks in current generative AI systems.</p>
+                <div class="pub-tags"><button class="tag" data-tag="Privacy" type="button">Privacy</button></div>
+                <div class="pub-links"><a href="https://petsymposium.org/popets/2025/popets-2025-0130.pdf" target="_blank" rel="noopener">paper</a></div>
+              </div>
+            </div>
 
-    <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=w5Q40Mcc2glzXD3S396H2X_VPVmmSjd_AlGD-dtYM2o&cl=ffffff&w=a"></script>
+            <div class="pub" data-tags="NLP">
+              <div class="pub-figure"><img src="assets/AmalREC.png" alt="AmalREC" loading="lazy"></div>
+              <div>
+                <div class="pub-title">AmalREC: A Dataset for Relation Extraction and Classification Leveraging Amalgamation of Large Language Models</div>
+                <div class="pub-authors"><strong>Mansi</strong>, Pranshu Pandya, Mahek Bhavesh Vora, Soumya Bharadwaj, Ashish Anand</div>
+                <div class="pub-venue">Preprint 2024</div>
+                <p class="pub-desc">A relation extraction dataset built by combining LLM-based and template-based generation over a 6-level relation hierarchy, with an analysis of bias and noise across relation buckets.</p>
+                <div class="pub-tags"><button class="tag" data-tag="NLP" type="button">NLP</button></div>
+                <div class="pub-links"><a href="https://arxiv.org/pdf/2412.20427" target="_blank" rel="noopener">paper</a></div>
+              </div>
+            </div>
+
+            <div class="pub" data-tags="Argumentation">
+              <div class="pub-figure"><img src="assets/ArgXAI.png" alt="Sparsification and argumentative explanations" loading="lazy"></div>
+              <div>
+                <div class="pub-title">On the Impact of Sparsification on Quantitative Argumentative Explanations in Neural Networks</div>
+                <div class="pub-authors">Daniel Peacock, <strong>Mansi</strong>, Nico Potyka, Francesca Toni, Xiang Yin</div>
+                <div class="pub-venue">3rd International Workshop on Argumentation for eXplainable AI</div>
+                <p class="pub-desc">We study how sparsification affects the quality and interpretability of quantitative argumentative explanations of neural networks.</p>
+                <div class="pub-tags"><button class="tag" data-tag="Argumentation" type="button">Argumentation</button></div>
+                <div class="pub-links"><a href="https://arxiv.org/pdf/2508.09385" target="_blank" rel="noopener">paper</a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="teaching" class="section">
+          <h2>Teaching Activities</h2>
+          <div class="items">
+            <div>
+              <div class="item-title">Causality and Explanation in AI</div>
+              <div class="item-meta">Teaching Assistant, Imperial College London</div>
+              <div class="item-summary">Coursework and tutorial preparation.</div>
+            </div>
+            <div>
+              <div class="item-title">Generative AI</div>
+              <div class="item-meta">Teaching Assistant, Imperial College London</div>
+            </div>
+            <div>
+              <div class="item-title">Natural Language Processing</div>
+              <div class="item-meta">Teaching Assistant, Imperial College London</div>
+            </div>
+            <div>
+              <div class="item-title">Machine Learning</div>
+              <div class="item-meta">Teaching Assistant, Imperial College London</div>
+            </div>
+            <div>
+              <div class="item-title">Calculus and Linear Algebra</div>
+              <div class="item-meta">Tutor, Imperial College London</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="service" class="section">
+          <h2>Academic Service</h2>
+          <div class="items">
+            <div>
+              <div class="item-title">AAAI</div>
+              <div class="item-meta">Reviewer</div>
+              <div class="item-year">2027</div>
+            </div>
+            <div>
+              <div class="item-title">NeurIPS</div>
+              <div class="item-meta">Reviewer</div>
+              <div class="item-year">2026</div>
+            </div>
+            <div>
+              <div class="item-title">ICML</div>
+              <div class="item-meta">Reviewer (Gold Reviewer Award)</div>
+              <div class="item-year">2026</div>
+            </div>
+            <div>
+              <div class="item-title">ICLR</div>
+              <div class="item-meta">Reviewer</div>
+              <div class="item-year">2026</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="section">
+          <h2>Projects</h2>
+          <div class="items">
+            <div>
+              <div class="item-title">Lost Child Found Application</div>
+              <div class="item-year">May 2022</div>
+              <div class="item-summary">Flutter Android app using a face recognition REST API to help find lost children. <a href="https://play.google.com/store/apps/details?id=com.manu.cheese" target="_blank" rel="noopener">Play Store</a> · <a href="https://github.com/AnMaJ/Microsoft-Engage-2022-Project-Cheese" target="_blank" rel="noopener">GitHub</a></div>
+            </div>
+            <div>
+              <div class="item-title">Using AED to estimate Annotator Count</div>
+              <div class="item-year">Sep 2022 – Nov 2022</div>
+              <div class="item-summary">Pipeline to estimate annotator counts for classification tasks using AED with DistilBERT. <a href="https://drive.google.com/file/d/1xJ3hvvDjEwALhD1cPXVJ52LFBF3KeOrV/view?usp=drive_link" target="_blank" rel="noopener">Report</a> · <a href="https://github.com/AnMaJ/Using-AED-to-estimate-Annotator-Count" target="_blank" rel="noopener">GitHub</a></div>
+            </div>
+            <div>
+              <div class="item-title">Raman — The Vision Bot</div>
+              <div class="item-year">Apr 2022 – May 2022</div>
+              <div class="item-summary">CNN-based hand-gesture recognition integrated with OpenCV and Arduino for a rock-paper-scissors game. <a href="https://shorturl.at/gjuV2" target="_blank" rel="noopener">GitHub</a></div>
+            </div>
+            <div>
+              <div class="item-title">Live Location Tracking App</div>
+              <div class="item-year">Jul 2021 – Aug 2021</div>
+              <div class="item-summary">Flutter app to share and monitor live locations with Google Maps API and safety alerts. <a href="https://github.com/AnMaJ/Live_Location_Tracking" target="_blank" rel="noopener">GitHub</a></div>
+            </div>
+            <div>
+              <div class="item-title">Other Projects</div>
+              <div class="item-summary">
+                <a href="https://github.com/AnMaJ/NanoC_Compiler" target="_blank" rel="noopener">NanoC Compiler</a> — compiler in Flex/Bison with MIPS codegen ·
+                <a href="https://github.com/AnMaJ/Operating-Systems-Lab-xv6" target="_blank" rel="noopener">xv6 OS</a> — scheduling, locks, lazy allocation ·
+                <a href="https://github.com/AnMaJ/ns-3-TCP-network-simulation" target="_blank" rel="noopener">ns-3 Simulation</a> — TCP over wired/wireless analysis ·
+                <a href="https://github.com/AnMaJ/Mini-Shell" target="_blank" rel="noopener">Mini Shell</a> — custom shell with pipes and utilities
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="achievements" class="section">
+          <h2>Achievements</h2>
+          <ul class="bullets two-col">
+            <li>Departmental PhD Scholarship, Imperial College London.</li>
+            <li>3rd prize at Imperial Computing Conference for work on attribute leakage.</li>
+            <li>India Future Leaders and Anne Seagrim Scholarships.</li>
+            <li>Grace Hopper Celebration Scholarship 2024 &amp; 2025.</li>
+            <li>Microsoft Engage mentee; received full-time role offer.</li>
+            <li>Barclays Global Student Discovery Program: top 10 sophomores.</li>
+            <li>KVPY National Research Fellowship (AIR 219).</li>
+            <li>JEE Main: AIR 1 in Physics; AIR 439 overall.</li>
+            <li>JEE Advanced: AIR 1450.</li>
+            <li>ICPC: AIR 93.</li>
+            <li>Flipkart Grid 4.0: Top 3% among 50k+ teams.</li>
+            <li>National Standard Examination in Physics: top 1% nationwide.</li>
+            <li>Regional Mathematics Olympiad qualifier (top 5%).</li>
+            <li>Technothlon Silver Medalist (AIR 239).</li>
+          </ul>
+        </section>
+
+        <section id="extracurricular" class="section">
+          <h2>Extracurricular</h2>
+          <ul class="bullets">
+            <li>Poster designer — <a href="https://imgur.com/a/D8BE9XK" target="_blank" rel="noopener">examples</a>.</li>
+            <li>Football — Silver medal in Spardha inter-hostel championship.</li>
+          </ul>
+        </section>
+
+        <footer class="footer">
+          <p>© <span id="year"></span> Mansi</p>
+          <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=w5Q40Mcc2glzXD3S396H2X_VPVmmSjd_AlGD-dtYM2o&cl=ffffff&w=a"></script>
+        </footer>
+      </div>
+    </main>
+
     <script src="script.js"></script>
-    
   </body>
-  </html>
+</html>

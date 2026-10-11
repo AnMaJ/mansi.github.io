@@ -2,42 +2,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Tabs
-  const tabs = document.querySelectorAll('.tab');
-  const panels = document.querySelectorAll('.tab-panel');
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const id = tab.getAttribute('data-tab');
-      tabs.forEach(t => t.classList.remove('active'));
-      panels.forEach(p => p.classList.remove('active'));
-      tab.classList.add('active');
-      const panel = document.getElementById(id);
-      if (panel) panel.classList.add('active');
-      // Scroll to top of content on tab switch
-      document.querySelector('.content')?.scrollTo({ top: 0, behavior: 'smooth' });
+  // Publication topic filter (filter bar buttons and per-paper tags)
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const pubs = document.querySelectorAll('.pub');
+  const applyFilter = (tag) => {
+    filterBtns.forEach(b => b.classList.toggle('is-active', b.dataset.tag === tag));
+    pubs.forEach(p => {
+      const tags = (p.dataset.tags || '').split(',').filter(Boolean);
+      p.style.display = tag === 'all' || tags.includes(tag) ? '' : 'none';
     });
+  };
+  document.querySelectorAll('.filter-btn, .tag').forEach(btn => {
+    btn.addEventListener('click', () => applyFilter(btn.dataset.tag));
   });
 
-  // Smooth scroll for internal links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
+  // Night mode toggle (initial mode is set inline in <head>)
+  const root = document.documentElement;
+  const toggle = document.querySelector('.mode-toggle');
+  const syncLabel = () => { if (toggle) toggle.textContent = root.classList.contains('dark') ? 'Day' : 'Night'; };
+  syncLabel();
+  toggle?.addEventListener('click', () => {
+    const dark = root.classList.toggle('dark');
+    try { localStorage.setItem('site-mode', dark ? 'dark' : 'light'); } catch (e) {}
+    syncLabel();
   });
-
-  // Fancy cursor ring
-  const ring = document.getElementById('cursorRing');
-  if (ring) {
-    document.addEventListener('mousemove', (e) => {
-      ring.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-    });
-    document.addEventListener('mousedown', () => ring.style.borderColor = '#ffe8c6');
-    document.addEventListener('mouseup', () => ring.style.borderColor = 'var(--cream)');
-  }
 });
-
-
